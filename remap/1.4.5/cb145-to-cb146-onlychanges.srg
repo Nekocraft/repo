@@ -1,0 +1,250 @@
+CL: net/minecraft/server/CreativeModeTab10 net/minecraft/server/CreativeModeTab7
+CL: net/minecraft/server/CreativeModeTab11 net/minecraft/server/CreativeModeTab8
+CL: net/minecraft/server/CreativeModeTab12 net/minecraft/server/CreativeModeTab9
+CL: net/minecraft/server/CreativeModeTab2 net/minecraft/server/CreativeModeTab10
+CL: net/minecraft/server/CreativeModeTab3 net/minecraft/server/CreativeModeTab11
+CL: net/minecraft/server/CreativeModeTab4 net/minecraft/server/CreativeModeTab12
+CL: net/minecraft/server/CreativeModeTab5 net/minecraft/server/CreativeModeTab2
+CL: net/minecraft/server/CreativeModeTab6 net/minecraft/server/CreativeModeTab3
+CL: net/minecraft/server/CreativeModeTab7 net/minecraft/server/CreativeModeTab4
+CL: net/minecraft/server/CreativeModeTab8 net/minecraft/server/CreativeModeTab5
+CL: net/minecraft/server/CreativeModeTab9 net/minecraft/server/CreativeModeTab6
+CL: net/minecraft/server/DemoItemInWorldManager net/minecraft/server/DemoPlayerInteractManager
+CL: net/minecraft/server/EmptyClass net/minecraft/server/EmptyClass2
+CL: net/minecraft/server/EmptyClass2 net/minecraft/server/EmptyClass
+CL: net/minecraft/server/ItemInWorldManager net/minecraft/server/PlayerInteractManager
+CL: net/minecraft/server/NetHandler net/minecraft/server/Connection
+CL: net/minecraft/server/NetLoginHandler net/minecraft/server/PendingConnection
+CL: net/minecraft/server/NetServerHandler net/minecraft/server/PlayerConnection
+CL: net/minecraft/server/PlayerInstance net/minecraft/server/PlayerChunk
+CL: net/minecraft/server/PlayerManager net/minecraft/server/PlayerChunkMap
+CL: net/minecraft/server/RecipesArmorDye net/minecraft/server/RecipeArmorDye
+CL: net/minecraft/server/RecipesMapClone net/minecraft/server/RecipeMapClone
+CL: net/minecraft/server/RecipesMapExtend net/minecraft/server/RecipeMapExtend
+CL: net/minecraft/server/ServerConfigurationManager net/minecraft/server/DedicatedPlayerList
+CL: net/minecraft/server/ServerConfigurationManagerAbstract net/minecraft/server/PlayerList
+FD: net/minecraft/server/DataWatcher/a net/minecraft/server/DataWatcher/b
+FD: net/minecraft/server/DataWatcher/b net/minecraft/server/DataWatcher/c
+FD: net/minecraft/server/DataWatcher/c net/minecraft/server/DataWatcher/d
+FD: net/minecraft/server/DataWatcher/d net/minecraft/server/DataWatcher/e
+FD: net/minecraft/server/DemoWorldServer/K net/minecraft/server/DemoWorldServer/J
+FD: net/minecraft/server/EnchantmentProtection/A net/minecraft/server/EnchantmentProtection/C
+FD: net/minecraft/server/EnchantmentProtection/B net/minecraft/server/EnchantmentProtection/D
+FD: net/minecraft/server/EnchantmentProtection/C net/minecraft/server/EnchantmentProtection/E
+FD: net/minecraft/server/EnchantmentProtection/D net/minecraft/server/EnchantmentProtection/F
+FD: net/minecraft/server/EnchantmentWeaponDamage/A net/minecraft/server/EnchantmentWeaponDamage/C
+FD: net/minecraft/server/EnchantmentWeaponDamage/B net/minecraft/server/EnchantmentWeaponDamage/D
+FD: net/minecraft/server/EnchantmentWeaponDamage/C net/minecraft/server/EnchantmentWeaponDamage/E
+FD: net/minecraft/server/EnchantmentWeaponDamage/D net/minecraft/server/EnchantmentWeaponDamage/F
+FD: net/minecraft/server/Entity/aq net/minecraft/server/Entity/ar
+FD: net/minecraft/server/Entity/ar net/minecraft/server/Entity/as
+FD: net/minecraft/server/Entity/h net/minecraft/server/Entity/ap
+FD: net/minecraft/server/EntityArrow/as net/minecraft/server/EntityArrow/at
+FD: net/minecraft/server/EntityArrow/au net/minecraft/server/EntityArrow/av
+FD: net/minecraft/server/EntityEnderDragon/bI net/minecraft/server/EntityEnderDragon/bJ
+FD: net/minecraft/server/EntityEnderDragon/bJ net/minecraft/server/EntityEnderDragon/bK
+FD: net/minecraft/server/EntityEnderDragon/bK net/minecraft/server/EntityEnderDragon/bL
+FD: net/minecraft/server/EntityEnderDragon/bL net/minecraft/server/EntityEnderDragon/bM
+FD: net/minecraft/server/EntityEnderDragon/bM net/minecraft/server/EntityEnderDragon/bN
+FD: net/minecraft/server/EntityEnderDragon/bN net/minecraft/server/EntityEnderDragon/bO
+FD: net/minecraft/server/EntityEnderDragon/bO net/minecraft/server/EntityEnderDragon/bP
+FD: net/minecraft/server/EntityEnderDragon/bP net/minecraft/server/EntityEnderDragon/bQ
+FD: net/minecraft/server/EntityEnderDragon/bQ net/minecraft/server/EntityEnderDragon/bR
+FD: net/minecraft/server/EntityEnderDragon/bR net/minecraft/server/EntityEnderDragon/bS
+FD: net/minecraft/server/EntityFireball/as net/minecraft/server/EntityFireball/at
+FD: net/minecraft/server/EntityFishingHook/as net/minecraft/server/EntityFishingHook/at
+FD: net/minecraft/server/EntityFishingHook/at net/minecraft/server/EntityFishingHook/au
+FD: net/minecraft/server/EntityFishingHook/au net/minecraft/server/EntityFishingHook/av
+FD: net/minecraft/server/EntityFishingHook/av net/minecraft/server/EntityFishingHook/aw
+FD: net/minecraft/server/EntityFishingHook/aw net/minecraft/server/EntityFishingHook/ax
+FD: net/minecraft/server/EntityFishingHook/ax net/minecraft/server/EntityFishingHook/ay
+FD: net/minecraft/server/EntityFishingHook/ay net/minecraft/server/EntityFishingHook/az
+FD: net/minecraft/server/EntityHuman/bM net/minecraft/server/EntityHuman/bN
+FD: net/minecraft/server/EntityHuman/bN net/minecraft/server/EntityHuman/bO
+FD: net/minecraft/server/EntityHuman/bO net/minecraft/server/EntityHuman/bP
+FD: net/minecraft/server/EntityHuman/bP net/minecraft/server/EntityHuman/bQ
+FD: net/minecraft/server/EntityHuman/bR net/minecraft/server/EntityHuman/bS
+FD: net/minecraft/server/EntityHuman/bS net/minecraft/server/EntityHuman/bT
+FD: net/minecraft/server/EntityHuman/bT net/minecraft/server/EntityHuman/bU
+FD: net/minecraft/server/EntityHuman/bU net/minecraft/server/EntityHuman/bV
+FD: net/minecraft/server/EntityHuman/bV net/minecraft/server/EntityHuman/bW
+FD: net/minecraft/server/EntityHuman/bW net/minecraft/server/EntityHuman/bX
+FD: net/minecraft/server/EntityHuman/bX net/minecraft/server/EntityHuman/bY
+FD: net/minecraft/server/EntityHuman/bZ net/minecraft/server/EntityHuman/ca
+FD: net/minecraft/server/EntityHuman/ca net/minecraft/server/EntityHuman/cb
+FD: net/minecraft/server/EntityHuman/cb net/minecraft/server/EntityHuman/cc
+FD: net/minecraft/server/EntityHuman/cg net/minecraft/server/EntityHuman/ch
+FD: net/minecraft/server/EntityHuman/ch net/minecraft/server/EntityHuman/ci
+FD: net/minecraft/server/EntityItem/d net/minecraft/server/EntityItem/c
+FD: net/minecraft/server/EntityItem/e net/minecraft/server/EntityItem/d
+FD: net/minecraft/server/EntityLiving/aA net/minecraft/server/EntityLiving/aB
+FD: net/minecraft/server/EntityLiving/aB net/minecraft/server/EntityLiving/aC
+FD: net/minecraft/server/EntityLiving/aC net/minecraft/server/EntityLiving/aD
+FD: net/minecraft/server/EntityLiving/aD net/minecraft/server/EntityLiving/aE
+FD: net/minecraft/server/EntityLiving/aE net/minecraft/server/EntityLiving/aF
+FD: net/minecraft/server/EntityLiving/aG net/minecraft/server/EntityLiving/aH
+FD: net/minecraft/server/EntityLiving/aH net/minecraft/server/EntityLiving/aI
+FD: net/minecraft/server/EntityLiving/aI net/minecraft/server/EntityLiving/aJ
+FD: net/minecraft/server/EntityLiving/aJ net/minecraft/server/EntityLiving/aK
+FD: net/minecraft/server/EntityLiving/aK net/minecraft/server/EntityLiving/aL
+FD: net/minecraft/server/EntityLiving/aL net/minecraft/server/EntityLiving/aM
+FD: net/minecraft/server/EntityLiving/aM net/minecraft/server/EntityLiving/aN
+FD: net/minecraft/server/EntityLiving/aN net/minecraft/server/EntityLiving/aO
+FD: net/minecraft/server/EntityLiving/aO net/minecraft/server/EntityLiving/aP
+FD: net/minecraft/server/EntityLiving/aP net/minecraft/server/EntityLiving/aQ
+FD: net/minecraft/server/EntityLiving/aR net/minecraft/server/EntityLiving/aS
+FD: net/minecraft/server/EntityLiving/aS net/minecraft/server/EntityLiving/aT
+FD: net/minecraft/server/EntityLiving/aT net/minecraft/server/EntityLiving/aU
+FD: net/minecraft/server/EntityLiving/aV net/minecraft/server/EntityLiving/aW
+FD: net/minecraft/server/EntityLiving/aW net/minecraft/server/EntityLiving/aX
+FD: net/minecraft/server/EntityLiving/aZ net/minecraft/server/EntityLiving/ba
+FD: net/minecraft/server/EntityLiving/as net/minecraft/server/EntityLiving/at
+FD: net/minecraft/server/EntityLiving/au net/minecraft/server/EntityLiving/av
+FD: net/minecraft/server/EntityLiving/av net/minecraft/server/EntityLiving/aw
+FD: net/minecraft/server/EntityLiving/aw net/minecraft/server/EntityLiving/ax
+FD: net/minecraft/server/EntityLiving/ax net/minecraft/server/EntityLiving/ay
+FD: net/minecraft/server/EntityLiving/ay net/minecraft/server/EntityLiving/az
+FD: net/minecraft/server/EntityLiving/az net/minecraft/server/EntityLiving/aA
+FD: net/minecraft/server/EntityLiving/bA net/minecraft/server/EntityLiving/bB
+FD: net/minecraft/server/EntityLiving/bB net/minecraft/server/EntityLiving/bC
+FD: net/minecraft/server/EntityLiving/bC net/minecraft/server/EntityLiving/bD
+FD: net/minecraft/server/EntityLiving/bD net/minecraft/server/EntityLiving/bE
+FD: net/minecraft/server/EntityLiving/bE net/minecraft/server/EntityLiving/bF
+FD: net/minecraft/server/EntityLiving/bF net/minecraft/server/EntityLiving/bG
+FD: net/minecraft/server/EntityLiving/bG net/minecraft/server/EntityLiving/bH
+FD: net/minecraft/server/EntityLiving/bH net/minecraft/server/EntityLiving/bI
+FD: net/minecraft/server/EntityLiving/bM net/minecraft/server/EntityLiving/bN
+FD: net/minecraft/server/EntityLiving/bN net/minecraft/server/EntityLiving/bO
+FD: net/minecraft/server/EntityLiving/bO net/minecraft/server/EntityLiving/bP
+FD: net/minecraft/server/EntityLiving/bP net/minecraft/server/EntityLiving/bQ
+FD: net/minecraft/server/EntityLiving/bQ net/minecraft/server/EntityLiving/bR
+FD: net/minecraft/server/EntityLiving/bS net/minecraft/server/EntityLiving/bT
+FD: net/minecraft/server/EntityLiving/bU net/minecraft/server/EntityLiving/bV
+FD: net/minecraft/server/EntityLiving/bV net/minecraft/server/EntityLiving/bW
+FD: net/minecraft/server/EntityLiving/ba net/minecraft/server/EntityLiving/bb
+FD: net/minecraft/server/EntityLiving/bb net/minecraft/server/EntityLiving/bc
+FD: net/minecraft/server/EntityLiving/bc net/minecraft/server/EntityLiving/bd
+FD: net/minecraft/server/EntityLiving/bd net/minecraft/server/EntityLiving/be
+FD: net/minecraft/server/EntityLiving/be net/minecraft/server/EntityLiving/bf
+FD: net/minecraft/server/EntityLiving/bf net/minecraft/server/EntityLiving/bg
+FD: net/minecraft/server/EntityLiving/bg net/minecraft/server/EntityLiving/bh
+FD: net/minecraft/server/EntityLiving/bh net/minecraft/server/EntityLiving/bi
+FD: net/minecraft/server/EntityLiving/bk net/minecraft/server/EntityLiving/bl
+FD: net/minecraft/server/EntityLiving/bp net/minecraft/server/EntityLiving/bq
+FD: net/minecraft/server/EntityLiving/bq net/minecraft/server/EntityLiving/br
+FD: net/minecraft/server/EntityLiving/bs net/minecraft/server/EntityLiving/bt
+FD: net/minecraft/server/EntityLiving/bt net/minecraft/server/EntityLiving/bu
+FD: net/minecraft/server/EntityLiving/bu net/minecraft/server/EntityLiving/bv
+FD: net/minecraft/server/EntityLiving/bv net/minecraft/server/EntityLiving/bw
+FD: net/minecraft/server/EntityLiving/bw net/minecraft/server/EntityLiving/bx
+FD: net/minecraft/server/EntityLiving/bx net/minecraft/server/EntityLiving/by
+FD: net/minecraft/server/EntityLiving/by net/minecraft/server/EntityLiving/bz
+FD: net/minecraft/server/EntityMinecart/as net/minecraft/server/EntityMinecart/at
+FD: net/minecraft/server/EntityMinecart/at net/minecraft/server/EntityMinecart/au
+FD: net/minecraft/server/EntityMinecart/au net/minecraft/server/EntityMinecart/av
+FD: net/minecraft/server/EntityMinecart/av net/minecraft/server/EntityMinecart/aw
+FD: net/minecraft/server/EntityMinecart/aw net/minecraft/server/EntityMinecart/ax
+FD: net/minecraft/server/EntityPlayer/ck net/minecraft/server/EntityPlayer/cl
+FD: net/minecraft/server/EntityPlayer/cl net/minecraft/server/EntityPlayer/cm
+FD: net/minecraft/server/EntityPlayer/cm net/minecraft/server/EntityPlayer/cn
+FD: net/minecraft/server/EntityPlayer/cp net/minecraft/server/EntityPlayer/cq
+FD: net/minecraft/server/EntityPlayer/cq net/minecraft/server/EntityPlayer/cr
+FD: net/minecraft/server/EntityPlayer/cr net/minecraft/server/EntityPlayer/cs
+FD: net/minecraft/server/EntityPlayer/itemInWorldManager net/minecraft/server/EntityPlayer/playerInteractManager
+FD: net/minecraft/server/EntityPlayer/netServerHandler net/minecraft/server/EntityPlayer/playerConnection
+FD: net/minecraft/server/EntitySquid/bI net/minecraft/server/EntitySquid/bJ
+FD: net/minecraft/server/EntitySquid/bJ net/minecraft/server/EntitySquid/bK
+FD: net/minecraft/server/EntitySquid/bK net/minecraft/server/EntitySquid/bL
+FD: net/minecraft/server/EntitySquid/bL net/minecraft/server/EntitySquid/bM
+FD: net/minecraft/server/EntitySquid/bM net/minecraft/server/EntitySquid/bN
+FD: net/minecraft/server/EntitySquid/bN net/minecraft/server/EntitySquid/bO
+FD: net/minecraft/server/EntitySquid/bO net/minecraft/server/EntitySquid/bP
+FD: net/minecraft/server/EntityVillager/bI net/minecraft/server/EntityVillager/bJ
+FD: net/minecraft/server/EntityVillager/bJ net/minecraft/server/EntityVillager/bK
+FD: net/minecraft/server/EntityVillager/bK net/minecraft/server/EntityVillager/bL
+FD: net/minecraft/server/EntityVillager/bL net/minecraft/server/EntityVillager/bM
+FD: net/minecraft/server/EntityVillager/bM net/minecraft/server/EntityVillager/bN
+FD: net/minecraft/server/EntityVillager/bN net/minecraft/server/EntityVillager/bO
+FD: net/minecraft/server/EntityVillager/bO net/minecraft/server/EntityVillager/bP
+FD: net/minecraft/server/EntityWither/bI net/minecraft/server/EntityWither/bJ
+FD: net/minecraft/server/Item/cj net/minecraft/server/Item/cm
+FD: net/minecraft/server/Item/ck net/minecraft/server/Item/cn
+FD: net/minecraft/server/Item/cl net/minecraft/server/Item/co
+FD: net/minecraft/server/ItemArmor/cl net/minecraft/server/ItemArmor/co
+FD: net/minecraft/server/ItemArmor/cm net/minecraft/server/ItemArmor/cp
+FD: net/minecraft/server/ItemFood/cl net/minecraft/server/ItemFood/co
+FD: net/minecraft/server/ItemFood/cm net/minecraft/server/ItemFood/cp
+FD: net/minecraft/server/ItemFood/cn net/minecraft/server/ItemFood/cq
+FD: net/minecraft/server/ItemFood/co net/minecraft/server/ItemFood/cr
+FD: net/minecraft/server/ItemFood/cp net/minecraft/server/ItemFood/cs
+FD: net/minecraft/server/ItemFood/cq net/minecraft/server/ItemFood/ct
+FD: net/minecraft/server/ItemTool/cl net/minecraft/server/ItemTool/co
+FD: net/minecraft/server/NetLoginHandler/k net/minecraft/server/PendingConnection/l
+FD: net/minecraft/server/NetworkManager/packetListener net/minecraft/server/NetworkManager/connection
+FD: net/minecraft/server/Packet23VehicleSpawn/h net/minecraft/server/Packet23VehicleSpawn/j
+FD: net/minecraft/server/Packet23VehicleSpawn/i net/minecraft/server/Packet23VehicleSpawn/k
+FD: net/minecraft/server/PlayerInstance/playerManager net/minecraft/server/PlayerChunk/playerChunkMap
+FD: net/minecraft/server/StructurePieceTreasure/d net/minecraft/server/StructurePieceTreasure/c
+FD: net/minecraft/server/StructurePieceTreasure/e net/minecraft/server/StructurePieceTreasure/d
+FD: net/minecraft/server/ThreadLoginVerifier/netLoginHandler net/minecraft/server/ThreadLoginVerifier/pendingConnection
+FD: net/minecraft/server/World/I net/minecraft/server/World/H
+FD: net/minecraft/server/World/K net/minecraft/server/World/J
+FD: net/minecraft/server/World/L net/minecraft/server/World/K
+FD: net/minecraft/server/World/M net/minecraft/server/World/L
+FD: net/minecraft/server/World/N net/minecraft/server/World/M
+FD: net/minecraft/server/World/O net/minecraft/server/World/N
+FD: net/minecraft/server/World/P net/minecraft/server/World/O
+FD: net/minecraft/server/World/w net/minecraft/server/World/v
+FD: net/minecraft/server/WorldServer/M net/minecraft/server/WorldServer/L
+FD: net/minecraft/server/WorldServer/N net/minecraft/server/WorldServer/M
+FD: net/minecraft/server/WorldServer/O net/minecraft/server/WorldServer/N
+FD: net/minecraft/server/WorldServer/Q net/minecraft/server/WorldServer/P
+FD: net/minecraft/server/WorldServer/R net/minecraft/server/WorldServer/Q
+FD: net/minecraft/server/WorldServer/S net/minecraft/server/WorldServer/R
+FD: net/minecraft/server/WorldServer/T net/minecraft/server/WorldServer/S
+MD: net/minecraft/server/BlockFluids/d (I)F net/minecraft/server/BlockFluids/e (I)F
+MD: net/minecraft/server/BlockLever/d (I)I net/minecraft/server/BlockLever/e (I)I
+MD: net/minecraft/server/BlockMinecartTrack/d (I)Z net/minecraft/server/BlockMinecartTrack/e (I)Z
+MD: net/minecraft/server/DedicatedServer/getServerConfigurationManager ()Lnet/minecraft/server/ServerConfigurationManagerAbstract; net/minecraft/server/DedicatedServer/getPlayerList ()Lnet/minecraft/server/PlayerList;
+MD: net/minecraft/server/EntityHuman/bS ()F net/minecraft/server/EntityHuman/bR ()F
+MD: net/minecraft/server/EntityHuman/bT ()Lnet/minecraft/server/ItemStack; net/minecraft/server/EntityHuman/bS ()Lnet/minecraft/server/ItemStack;
+MD: net/minecraft/server/EntityHuman/bU ()V net/minecraft/server/EntityHuman/bT ()V
+MD: net/minecraft/server/EntityHuman/bW ()Z net/minecraft/server/EntityHuman/bV ()Z
+MD: net/minecraft/server/EntityHuman/ce ()Z net/minecraft/server/EntityHuman/cd ()Z
+MD: net/minecraft/server/EntityHuman/f (Z)Z net/minecraft/server/EntityHuman/g (Z)Z
+MD: net/minecraft/server/EntityItem/d ()V net/minecraft/server/EntityItem/g ()V
+MD: net/minecraft/server/Item/a (Lnet/minecraft/server/ItemStack;)I net/minecraft/server/Item/c_ (Lnet/minecraft/server/ItemStack;)I
+MD: net/minecraft/server/Item/c_ (Lnet/minecraft/server/ItemStack;)Ljava/lang/String; net/minecraft/server/Item/d (Lnet/minecraft/server/ItemStack;)Ljava/lang/String;
+MD: net/minecraft/server/Item/d_ (Lnet/minecraft/server/ItemStack;)Lnet/minecraft/server/EnumAnimation; net/minecraft/server/Item/b_ (Lnet/minecraft/server/ItemStack;)Lnet/minecraft/server/EnumAnimation;
+MD: net/minecraft/server/Item/g (Lnet/minecraft/server/ItemStack;)Ljava/lang/String; net/minecraft/server/Item/i (Lnet/minecraft/server/ItemStack;)Ljava/lang/String;
+MD: net/minecraft/server/Item/h (Lnet/minecraft/server/ItemStack;)Z net/minecraft/server/Item/j (Lnet/minecraft/server/ItemStack;)Z
+MD: net/minecraft/server/Item/i (Lnet/minecraft/server/ItemStack;)Ljava/lang/String; net/minecraft/server/Item/k (Lnet/minecraft/server/ItemStack;)Ljava/lang/String;
+MD: net/minecraft/server/Item/j (Lnet/minecraft/server/ItemStack;)Ljava/lang/String; net/minecraft/server/Item/l (Lnet/minecraft/server/ItemStack;)Ljava/lang/String;
+MD: net/minecraft/server/Item/k (Lnet/minecraft/server/ItemStack;)Z net/minecraft/server/Item/d_ (Lnet/minecraft/server/ItemStack;)Z
+MD: net/minecraft/server/ItemArmor/b_ (Lnet/minecraft/server/ItemStack;)Z net/minecraft/server/ItemArmor/a (Lnet/minecraft/server/ItemStack;)Z
+MD: net/minecraft/server/ItemBlock/c_ (Lnet/minecraft/server/ItemStack;)Ljava/lang/String; net/minecraft/server/ItemBlock/d (Lnet/minecraft/server/ItemStack;)Ljava/lang/String;
+MD: net/minecraft/server/ItemBow/a (Lnet/minecraft/server/ItemStack;)I net/minecraft/server/ItemBow/c_ (Lnet/minecraft/server/ItemStack;)I
+MD: net/minecraft/server/ItemBow/d_ (Lnet/minecraft/server/ItemStack;)Lnet/minecraft/server/EnumAnimation; net/minecraft/server/ItemBow/b_ (Lnet/minecraft/server/ItemStack;)Lnet/minecraft/server/EnumAnimation;
+MD: net/minecraft/server/ItemCloth/c_ (Lnet/minecraft/server/ItemStack;)Ljava/lang/String; net/minecraft/server/ItemCloth/d (Lnet/minecraft/server/ItemStack;)Ljava/lang/String;
+MD: net/minecraft/server/ItemCoal/c_ (Lnet/minecraft/server/ItemStack;)Ljava/lang/String; net/minecraft/server/ItemCoal/d (Lnet/minecraft/server/ItemStack;)Ljava/lang/String;
+MD: net/minecraft/server/ItemDye/c_ (Lnet/minecraft/server/ItemStack;)Ljava/lang/String; net/minecraft/server/ItemDye/d (Lnet/minecraft/server/ItemStack;)Ljava/lang/String;
+MD: net/minecraft/server/ItemFood/a (Lnet/minecraft/server/ItemStack;)I net/minecraft/server/ItemFood/c_ (Lnet/minecraft/server/ItemStack;)I
+MD: net/minecraft/server/ItemFood/d_ (Lnet/minecraft/server/ItemStack;)Lnet/minecraft/server/EnumAnimation; net/minecraft/server/ItemFood/b_ (Lnet/minecraft/server/ItemStack;)Lnet/minecraft/server/EnumAnimation;
+MD: net/minecraft/server/ItemLeaves/c_ (Lnet/minecraft/server/ItemStack;)Ljava/lang/String; net/minecraft/server/ItemLeaves/d (Lnet/minecraft/server/ItemStack;)Ljava/lang/String;
+MD: net/minecraft/server/ItemMilkBucket/a (Lnet/minecraft/server/ItemStack;)I net/minecraft/server/ItemMilkBucket/c_ (Lnet/minecraft/server/ItemStack;)I
+MD: net/minecraft/server/ItemMilkBucket/d_ (Lnet/minecraft/server/ItemStack;)Lnet/minecraft/server/EnumAnimation; net/minecraft/server/ItemMilkBucket/b_ (Lnet/minecraft/server/ItemStack;)Lnet/minecraft/server/EnumAnimation;
+MD: net/minecraft/server/ItemMonsterEgg/j (Lnet/minecraft/server/ItemStack;)Ljava/lang/String; net/minecraft/server/ItemMonsterEgg/l (Lnet/minecraft/server/ItemStack;)Ljava/lang/String;
+MD: net/minecraft/server/ItemMultiTexture/c_ (Lnet/minecraft/server/ItemStack;)Ljava/lang/String; net/minecraft/server/ItemMultiTexture/d (Lnet/minecraft/server/ItemStack;)Ljava/lang/String;
+MD: net/minecraft/server/ItemPotion/a (Lnet/minecraft/server/ItemStack;)I net/minecraft/server/ItemPotion/c_ (Lnet/minecraft/server/ItemStack;)I
+MD: net/minecraft/server/ItemPotion/d_ (Lnet/minecraft/server/ItemStack;)Lnet/minecraft/server/EnumAnimation; net/minecraft/server/ItemPotion/b_ (Lnet/minecraft/server/ItemStack;)Lnet/minecraft/server/EnumAnimation;
+MD: net/minecraft/server/ItemPotion/j (Lnet/minecraft/server/ItemStack;)Ljava/lang/String; net/minecraft/server/ItemPotion/l (Lnet/minecraft/server/ItemStack;)Ljava/lang/String;
+MD: net/minecraft/server/ItemPotion/l (Lnet/minecraft/server/ItemStack;)Ljava/util/List; net/minecraft/server/ItemPotion/g (Lnet/minecraft/server/ItemStack;)Ljava/util/List;
+MD: net/minecraft/server/ItemSkull/c_ (Lnet/minecraft/server/ItemStack;)Ljava/lang/String; net/minecraft/server/ItemSkull/d (Lnet/minecraft/server/ItemStack;)Ljava/lang/String;
+MD: net/minecraft/server/ItemSkull/j (Lnet/minecraft/server/ItemStack;)Ljava/lang/String; net/minecraft/server/ItemSkull/l (Lnet/minecraft/server/ItemStack;)Ljava/lang/String;
+MD: net/minecraft/server/ItemStep/c_ (Lnet/minecraft/server/ItemStack;)Ljava/lang/String; net/minecraft/server/ItemStep/d (Lnet/minecraft/server/ItemStack;)Ljava/lang/String;
+MD: net/minecraft/server/ItemSword/a (Lnet/minecraft/server/ItemStack;)I net/minecraft/server/ItemSword/c_ (Lnet/minecraft/server/ItemStack;)I
+MD: net/minecraft/server/ItemSword/d_ (Lnet/minecraft/server/ItemStack;)Lnet/minecraft/server/EnumAnimation; net/minecraft/server/ItemSword/b_ (Lnet/minecraft/server/ItemStack;)Lnet/minecraft/server/EnumAnimation;
+MD: net/minecraft/server/ItemWithAuxData/c_ (Lnet/minecraft/server/ItemStack;)Ljava/lang/String; net/minecraft/server/ItemWithAuxData/d (Lnet/minecraft/server/ItemStack;)Ljava/lang/String;
+MD: net/minecraft/server/ItemWrittenBook/j (Lnet/minecraft/server/ItemStack;)Ljava/lang/String; net/minecraft/server/ItemWrittenBook/l (Lnet/minecraft/server/ItemStack;)Ljava/lang/String;
+MD: net/minecraft/server/MinecraftServer/getServerConfigurationManager ()Lnet/minecraft/server/ServerConfigurationManagerAbstract; net/minecraft/server/MinecraftServer/getPlayerList ()Lnet/minecraft/server/PlayerList;
+MD: net/minecraft/server/WorldServer/getPlayerManager ()Lnet/minecraft/server/PlayerManager; net/minecraft/server/WorldServer/getPlayerChunkMap ()Lnet/minecraft/server/PlayerChunkMap;

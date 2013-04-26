@@ -1,0 +1,186 @@
+commit 727a8e79d81d27e1f8acb36c5218d227a9d4b310
+Author: Agaricus <agaricusb@yahoo.com>
+Date:   Fri Mar 15 22:04:26 2013 -0700
+
+    Pre-rename fixes to accomodate MCP remapping
+    
+    There should be no functional changes with these fixes.
+
+diff --git a/src/main/java/net/minecraft/server/Block.java b/src/main/java/net/minecraft/server/Block.java
+index 4392cb2..6b6bf9e 100644
+--- a/src/main/java/net/minecraft/server/Block.java
++++ b/src/main/java/net/minecraft/server/Block.java
+@@ -768,4 +768,15 @@ public class Block {
+         return 0;
+     }
+     // CraftBukkit end
++
++    // CBMCP start - public accessors for CB code added in PlayerInteractManager(ItemInWorldManager) that wants
++    // to call these methods, to cope with repackaging restricting protected access
++    public static boolean canSilkHarvest__Public_CB(Block block) {
++        return block.r_();
++    }
++
++    public static void dropXpOnBlockBreak__Public_CB(Block block, World world, int i, int j, int k, int l) {
++        block.j(world, i, j, k, l);
++    }
++    // CBMCP end
+ }
+diff --git a/src/main/java/net/minecraft/server/ConsoleLogFormatter.java b/src/main/java/net/minecraft/server/ConsoleLogFormatter.java
+index 60d26d5..ff85f41 100644
+--- a/src/main/java/net/minecraft/server/ConsoleLogFormatter.java
++++ b/src/main/java/net/minecraft/server/ConsoleLogFormatter.java
+@@ -9,7 +9,7 @@ import java.util.logging.LogRecord;
+ 
+ import java.util.regex.Pattern; // CraftBukkit
+ 
+-class ConsoleLogFormatter extends Formatter {
++public class ConsoleLogFormatter extends Formatter { // CBMCP - package-private -> public to cope with repackaging
+ 
+     private SimpleDateFormat b;
+ 
+diff --git a/src/main/java/net/minecraft/server/PlayerConnection.java b/src/main/java/net/minecraft/server/PlayerConnection.java
+index aeca924..bebecb4 100644
+--- a/src/main/java/net/minecraft/server/PlayerConnection.java
++++ b/src/main/java/net/minecraft/server/PlayerConnection.java
+@@ -61,7 +61,7 @@ public class PlayerConnection extends Connection {
+     private long i;
+     private static Random j = new Random();
+     private long k;
+-    private volatile int chatThrottle = 0; private static final AtomicIntegerFieldUpdater chatSpamField = AtomicIntegerFieldUpdater.newUpdater(PlayerConnection.class, "chatThrottle"); // CraftBukkit - multithreaded field
++    private volatile int chatThrottle = 0; private static final AtomicIntegerFieldUpdater chatSpamField = AtomicIntegerFieldUpdater.newUpdater(PlayerConnection.class, "chatSpamThresholdCount"); // CraftBukkit - multithreaded field // CBMCP - chatThrottle -> chatSpamThresholdCount
+     private int x = 0;
+     private double y;
+     private double z;
+diff --git a/src/main/java/net/minecraft/server/PlayerInteractManager.java b/src/main/java/net/minecraft/server/PlayerInteractManager.java
+index 92e68be..f30b650 100644
+--- a/src/main/java/net/minecraft/server/PlayerInteractManager.java
++++ b/src/main/java/net/minecraft/server/PlayerInteractManager.java
+@@ -271,7 +271,7 @@ public class PlayerInteractManager {
+ 
+             if (nmsBlock != null && !event.isCancelled() && !this.isCreative() && this.player.a(nmsBlock)) {
+                 // Copied from Block.a(world, entityhuman, int, int, int, int)
+-                if (!(nmsBlock.r_() && EnchantmentManager.hasSilkTouchEnchantment(this.player))) {
++                if (!(Block.canSilkHarvest__Public_CB(nmsBlock) && EnchantmentManager.hasSilkTouchEnchantment(this.player))) { // CBMCP - use public wrapper
+                     int data = block.getData();
+                     int bonusLevel = EnchantmentManager.getBonusBlockLootEnchantmentLevel(this.player);
+ 
+@@ -331,7 +331,7 @@ public class PlayerInteractManager {
+ 
+             // CraftBukkit start - drop event experience
+             if (flag && event != null) {
+-                Block.byId[l].j(this.world, i, j, k, event.getExpToDrop());
++                Block.dropXpOnBlockBreak__Public_CB(Block.byId[l], this.world, i, j, k, event.getExpToDrop()); // CBMCP - use public wrapper
+             }
+             // CraftBukkit end
+ 
+diff --git a/src/main/java/net/minecraft/server/Vec3D.java b/src/main/java/net/minecraft/server/Vec3D.java
+index a668e18..d047e80 100644
+--- a/src/main/java/net/minecraft/server/Vec3D.java
++++ b/src/main/java/net/minecraft/server/Vec3D.java
+@@ -32,7 +32,7 @@ public class Vec3D {
+         this.b = vec3dpool;
+     }
+ 
+-    protected Vec3D b(double d0, double d1, double d2) {
++    public Vec3D b(double d0, double d1, double d2) { // CBMCP - protected -> public, for repackaging
+         this.c = d0;
+         this.d = d1;
+         this.e = d2;
+diff --git a/src/main/java/net/minecraft/server/WorldNBTStorage.java b/src/main/java/net/minecraft/server/WorldNBTStorage.java
+index e0ae71a..281669b 100644
+--- a/src/main/java/net/minecraft/server/WorldNBTStorage.java
++++ b/src/main/java/net/minecraft/server/WorldNBTStorage.java
+@@ -194,7 +194,7 @@ public class WorldNBTStorage implements IDataManager, IPlayerFileData {
+         if (nbttagcompound != null) {
+             // CraftBukkit start
+             if (entityhuman instanceof EntityPlayer) {
+-                CraftPlayer player = (CraftPlayer) entityhuman.bukkitEntity;
++                CraftPlayer player = (CraftPlayer) entityhuman.getBukkitEntity(); // CBMCP - replace .bukkitEntity (protected) with .getBukkitEntity() (public)
+                 player.setFirstPlayed(new File(playerDir, entityhuman.name + ".dat").lastModified());
+             }
+             // CraftBukkit end
+diff --git a/src/main/java/net/minecraft/server/WorldServer.java b/src/main/java/net/minecraft/server/WorldServer.java
+index d99b6a3..2cdf856 100644
+--- a/src/main/java/net/minecraft/server/WorldServer.java
++++ b/src/main/java/net/minecraft/server/WorldServer.java
+@@ -934,4 +934,14 @@ public class WorldServer extends World implements org.bukkit.BlockChangeDelegate
+         return this.setTypeIdAndData(x, y, z, typeId, data, 3);
+     }
+     // CraftBukkit end
++
++    // CBMCP start - more compatibility for BlockChangeDelegate, post-rename
++    public int getTypeId__API_CB(int i, int j, int k) {
++        return this.getTypeId(i, j, k);
++    }
++
++    public boolean isEmpty__API_CB(int i, int j, int k) {
++        return this.isEmpty(i, j, k);
++    }
++    // CBMCP end
+ }
+diff --git a/src/main/java/org/bukkit/craftbukkit/generator/CustomChunkGenerator.java b/src/main/java/org/bukkit/craftbukkit/generator/CustomChunkGenerator.java
+index 36aa6f8..ee0681d 100644
+--- a/src/main/java/org/bukkit/craftbukkit/generator/CustomChunkGenerator.java
++++ b/src/main/java/org/bukkit/craftbukkit/generator/CustomChunkGenerator.java
+@@ -206,7 +206,7 @@ public class CustomChunkGenerator extends InternalChunkGenerator {
+         return generator.getDefaultPopulators(world);
+     }
+ 
+-    public List<?> getMobsFor(EnumCreatureType type, int x, int y, int z) {
++    public List getMobsFor(EnumCreatureType type, int x, int y, int z) { // CBMCP - List<?> -> List
+         BiomeBase biomebase = world.getBiome(x, z);
+ 
+         return biomebase == null ? null : biomebase.getMobs(type);
+diff --git a/src/main/java/org/bukkit/craftbukkit/generator/NormalChunkGenerator.java b/src/main/java/org/bukkit/craftbukkit/generator/NormalChunkGenerator.java
+index c24c524..bf810c3 100644
+--- a/src/main/java/org/bukkit/craftbukkit/generator/NormalChunkGenerator.java
++++ b/src/main/java/org/bukkit/craftbukkit/generator/NormalChunkGenerator.java
+@@ -61,7 +61,7 @@ public class NormalChunkGenerator extends InternalChunkGenerator {
+         return provider.canSave();
+     }
+ 
+-    public List<?> getMobsFor(EnumCreatureType ect, int i, int i1, int i2) {
++    public List getMobsFor(EnumCreatureType ect, int i, int i1, int i2) { // CBMCP - List<?> -> List
+         return provider.getMobsFor(ect, i, i1, i2);
+     }
+ 
+diff --git a/src/test/java/org/bukkit/AchievementTest.java b/src/test/java/org/bukkit/AchievementTest.java
+index b8695cc..fd13e8e 100644
+--- a/src/test/java/org/bukkit/AchievementTest.java
++++ b/src/test/java/org/bukkit/AchievementTest.java
+@@ -23,7 +23,7 @@ public class AchievementTest {
+         for (net.minecraft.server.Achievement statistic : (List<net.minecraft.server.Achievement>) AchievementList.e) {
+             int id = statistic.e;
+ 
+-            String name = Util.getInternalState(Statistic.class, statistic, "a");
++            String name = Util.getInternalState(Statistic.class, statistic, "statName"); // CBMCP
+             String message = String.format("org.bukkit.Achievement is missing id: %d named: '%s'", id - Achievement.STATISTIC_OFFSET, name);
+ 
+             Achievement subject = Achievement.getById(id);
+diff --git a/src/test/java/org/bukkit/PerMaterialTest.java b/src/test/java/org/bukkit/PerMaterialTest.java
+index f55920b..000e165 100644
+--- a/src/test/java/org/bukkit/PerMaterialTest.java
++++ b/src/test/java/org/bukkit/PerMaterialTest.java
+@@ -30,7 +30,7 @@ public class PerMaterialTest extends AbstractTestingBase {
+ 
+     @BeforeClass
+     public static void getFireValues() {
+-        fireValues = Util.getInternalState(BlockFire.class, Block.FIRE, "a");
++        fireValues = Util.getInternalState(BlockFire.class, Block.FIRE, "chance");
+     }
+ 
+     @Parameters(name= "{index}: {0}")
+diff --git a/src/test/java/org/bukkit/potion/PotionTest.java b/src/test/java/org/bukkit/potion/PotionTest.java
+index a9df7d1..bf3c299 100644
+--- a/src/test/java/org/bukkit/potion/PotionTest.java
++++ b/src/test/java/org/bukkit/potion/PotionTest.java
+@@ -26,7 +26,7 @@ public class PotionTest extends AbstractTestingBase {
+ 
+     @Test
+     public void testEffectCompleteness() throws Throwable {
+-        Map<Integer, ?> effectDurations = Util.getInternalState(net.minecraft.server.PotionBrewer.class, null, "effectDurations");
++        Map<Integer, ?> effectDurations = Util.getInternalState(net.minecraft.server.PotionBrewer.class, null, "potionRequirements"); // CBMCP
+ 
+         Map<PotionType, String> effects = new EnumMap(PotionType.class);
+         for (int id : effectDurations.keySet()) {
